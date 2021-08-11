@@ -19,6 +19,7 @@ Other Style Guides
 ## Table of Contents
 
 1. [Clean Coding](#clean-coding)
+1. [ES6](#es6)
 
 ## Clean Coding
 
