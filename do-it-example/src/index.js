@@ -62,3 +62,32 @@ var combined1 = {
 var { other, ...others } = combined1;
 // others1 = { one: 1, two: 2, three: 3, four: 4}
 console.log(others);
+
+const arr3 = [];
+const arr4 = arr3.concat(1); // 배열에 새로운 값을 추가할 때는 push() 함수 대신 concat() 함수를
+const arr5 = [...arr4, 2, 3];
+const arr6 = arr5.slice(0, 1); // 배열의 값을 삭제할 때는 pop(), shift() 함수 대신 slice(), conat() 함수에 전개 연산자를 조합하여 사용
+
+// 값을 추가할 때는 push() 함수 대신 concat() 함수를
+// 값을 삭제할 때는 pop(), shift() 함수 대신 slice(), conat() 함수에 전개 연산자를 조합하여 사용
+// 이렇게 하면 새값을 할당하는 것이 아니라 기존의 값을 이용(추출)하여 새 불변 변수에 할당하는 것이므로 괜찮다.
+console.log('arr4', arr4);
+console.log('arr5', arr5);
+console.log('arr6', arr6);
+
+const [first, ...arr7] = arr5;
+console.log('first', first);
+console.log('arr7', arr7);
+
+const add = (first, second) => {
+  return console.log(first + second);
+};
+
+add(10, 100);
+
+const list = [0, 1];
+let [item11, item22, item33 = -1] = list;
+[item22, item11] = [item11, item22];
+
+console.log(item11);
+console.log(item22);
